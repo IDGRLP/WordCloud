@@ -13,8 +13,8 @@
 # Daten
 dir_dat <- file.path("G:", "2_Registerbereich", "2.2_Auswertung", "01_Rohdaten", "ZfKD_Lieferdatensatz", "2024", "20241022")
 
-# Ergebnisse
-dir_erg
+# Ergebnisse (keine Ergebnisausgabe)
+# dir_erg
 
 # Pakete
 dir_packages <- file.path("G:", "2_Registerbereich", "2.2_Auswertung", "_R_Project", "_R_Packages_433")
@@ -51,13 +51,13 @@ display.brewer.all()
 set.seed(10)
 
 # Erstellung der Abbildung
-wordcloud(words = ZfKD_Substanz1$Bezeichnung,
-          freq = ZfKD_Substanz1$Anzahl, 
-          min.freq = 1,           
-          max.words = 100, 
-          random.order = FALSE, 
-          rot.per = 0.35,            
-          colors = brewer.pal(8, "Dark2"))
+wordcloud::wordcloud(words = ZfKD_Substanz1$Bezeichnung,
+                     freq = ZfKD_Substanz1$Anzahl, 
+                     min.freq = 1,           
+                     max.words = 100, 
+                     random.order = FALSE, 
+                     rot.per = 0.35,            
+                     colors = brewer.pal(8, "Dark2"))
 
 
 
@@ -69,11 +69,12 @@ palette_kkn_hex <- c("#82A287", "#CCE9CC", "#11843A", "#1ACC5A", "#67EB96", "#4C
 set.seed(50)
 
 # Erstellung der Abbildung
-wordcloud(words = ZfKD_Substanz1$Bezeichnung,
-          freq = ZfKD_Substanz1$Anzahl, 
-          min.freq = 1,           
-          max.words = 100, 
-          random.order = FALSE, 
-          rot.per = 0.35,            
-          colors = palette_kkn_hex)
+wordcloud::wordcloud(words = ZfKD_Substanz1$Bezeichnung,
+                     freq = ZfKD_Substanz1$Anzahl, 
+                     min.freq = 1,           
+                     max.words = 100, 
+                     random.order = FALSE, 
+                     rot.per = 0.35,            
+                     colors = palette_kkn_hex)
+
 
